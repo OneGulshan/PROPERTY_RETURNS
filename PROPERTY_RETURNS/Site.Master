@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PROPERTY_RETURNS.SiteMaster" %>
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head runat="server">
+
+<%--<meta http-equiv="x-ua-compatible" content="IE=edge"/>--%>
+ <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+ <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery-3.7.0.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Property Returns Application
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                      <%--  [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]--%>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                       <%-- Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!--%>
+                       <%-- [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/Account/Login.aspx"/> ]--%>
+                    </LoggedInTemplate>
+
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+             <telerik:RadScriptManager ID="Radscriptmanager1" runat="server" EnablePageMethods="true"></telerik:RadScriptManager>
+
+            <table  align="left" style="left:2%; width:100%;">
+             
+       <telerik:RadMenu ID="RadMenu1" runat="server" Width="100%" Skin="Office2007">
+            <Items>
+                <%--<telerik:RadMenuItem runat="server" NavigateUrl="UploadFile.aspx" Text="Home" Font-Bold="True" Font-Size="12pt">
+                </telerik:RadMenuItem>  //#043454 --%>
+                <telerik:RadMenuItem runat="server" NavigateUrl="HOME_PAGE_NEW.aspx" Text="Home" Font-Bold="true">
+                         </telerik:RadMenuItem>
+                <telerik:RadMenuItem runat="server" NavigateUrl="dateSelection.aspx" Text="Change Holding Date" Font-Bold="true">
+                         </telerik:RadMenuItem>                
+                <%--<telerik:RadMenuItem runat="server" NavigateUrl="" Text="About" Font-Bold="true" >
+                </telerik:RadMenuItem>
+                <telerik:RadMenuItem runat="server" NavigateUrl="" Text="Contact" Font-Bold="true" >
+                </telerik:RadMenuItem>--%>
+                <telerik:RadMenuItem runat="server" NavigateUrl="~/Documents/HELP -Property Return App_New.pdf" Text="Help" Font-Bold="true" Target="_blank" Visible="False">
+                </telerik:RadMenuItem>
+               <%-- <telerik:RadMenuItem runat="server" NavigateUrl="~/Documents/LOKPAL ACT 2013.pdf" Text="The Lokpal & Lokayuktas Act 2013" Font-Bold="true" Target="_blank">
+                </telerik:RadMenuItem>
+                <telerik:RadMenuItem runat="server" NavigateUrl="~/Documents/CHRC773.pdf" Text="Corporate HR Circular 773/2015" Font-Bold="true" Target="_blank">
+                </telerik:RadMenuItem>
+                <telerik:RadMenuItem runat="server" NavigateUrl="~/Documents/407_12_2014_AVD_IV_B dated 18-03-15.pdf" Text="Formats for filing Returns" Font-Bold="true" Target="_blank">
+                </telerik:RadMenuItem>--%>
+                 <telerik:RadMenuItem runat="server" NavigateUrl="~/Documents/CHRC824.pdf" Text="Corporate HR Circular CHRC824" Font-Bold="true" Target="_blank">
+                </telerik:RadMenuItem>
+               <%-- <telerik:RadMenuItem runat="server" NavigateUrl="~/REPORTS/MYRETURNS.aspx" Text="My Returns" Font-Bold="true" >
+                </telerik:RadMenuItem>--%>
+                <%--<telerik:RadMenuItem runat="server" NavigateUrl="~/REPORTS/MYRETURNS.aspx" Text="My Returns" Font-Bold="true" >
+                </telerik:RadMenuItem>--%>
+                <telerik:RadMenuItem runat="server" NavigateUrl="~/Account/Logout.aspx" Text="Logout" Font-Bold="true" >
+                </telerik:RadMenuItem>
+                <telerik:RadMenuItem runat="server" NavigateUrl="~/Documents/2022_FAQ.pdf" Text="FAQ" Font-Bold="true" Target="_blank">
+                </telerik:RadMenuItem>
+
+                <%--<telerik:RadMenuItem runat="server" NavigateUrl="~/FORMS/UserAuth.aspx" Text="User Authorization" Font-Bold="true" Target="_blank">
+                </telerik:RadMenuItem>
+                    <telerik:RadMenuItem runat="server" NavigateUrl="" Text="Reports" Font-Bold="true" >
+                <Items>
+                <telerik:RadMenuItem runat="server" NavigateUrl="" Text="Admin Reports" Font-Bold="true" >
+                <Items>
+                    <telerik:RadMenuItem runat="server" NavigateUrl="~/FORMS/GEN_REPORT1.aspx" Text="Holdings" Font-Bold="true" >
+                    </telerik:RadMenuItem>
+                    <telerik:RadMenuItem runat="server" NavigateUrl="" Text="Transactions" Font-Bold="true" >
+                    </telerik:RadMenuItem>
+                </Items>
+                </telerik:RadMenuItem>
+                </Items>
+                </telerik:RadMenuItem>--%>
+                 
+            </Items>
+
+        </telerik:RadMenu>
+
+        
+        </table>
+
+
+                <%--<asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                    </Items>
+                </asp:Menu>--%>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

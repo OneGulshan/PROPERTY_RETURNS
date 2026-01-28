@@ -1,0 +1,57 @@
+﻿<style >
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+}
+
+.login-panel {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+    .login-panel h4 {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+.captcha-image {
+    width: 130px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.captcha-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-login {
+    width: 100%;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #333;
+}
+
+.otp-panel {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.gritter-center {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+</style >

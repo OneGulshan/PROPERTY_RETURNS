@@ -1,0 +1,616 @@
+﻿body
+{
+    margin: 0px;
+    padding: 0px;
+}
+#container
+{
+    width: 94%;
+    height: 751px;
+    background-color: white;
+}
+#container1
+{
+    width: 94%;
+    height: 90%;
+    background-color: white;
+}
+#header1
+{
+    width:100%;
+    height:13%;
+    position:relative;
+    background-color:white;
+    top: 0px;
+    left: 0px;
+}
+#footer
+{
+    width:100%;
+    height:10%;
+    background-color:white;
+}
+#mainWrap
+{
+    border-style: solid;
+    border-color: #FF9900;
+    width: 100%;
+    height: 698px;
+    background-color: white;
+}
+#main1Wrap
+{
+    border-style: solid;
+    border-color: #FF9900;
+    width: 100%;
+    height: 698px;
+    text-align: center;
+    background-image: url('../images/bg3.jpg');
+}
+.titledate
+{
+   
+    font-family:'Arial';
+    font-size:x-large;
+    font-weight:500;
+    text-align:center;
+}
+.titledate1
+{
+    border: thin solid #C0C0C0;
+    font-family: 'Arial';
+    font-size: x-large;
+    font-weight: 500;
+    text-align: center;
+}
+.titleguest
+{
+   
+    font-family:'Arial';
+    font-size:x-large;
+    font-weight:500;
+    text-align:left;
+}
+.loginWrap
+{
+    border-style: outset;
+    width: 400px;
+    height: 240px;
+    background-color: white;
+    margin: auto;
+}
+.empHomeWrap
+{
+    width:550px;
+    height:240px;
+    background-color:white;
+    margin:auto;
+   border-style: outset; 
+   
+}
+.confirmBookArea
+{
+    width:92%;
+    height:51%;
+    background-color:white;
+      margin: 38px;
+    box-shadow:10px;
+     box-shadow: 0 2px 5px #404040;
+      border-top-left-radius :7px;
+    border-top-right-radius:7px;
+}
+.userEditArea
+{
+    width:90%;
+    height:63%;
+    background-color:white;
+      margin: 38px;
+    box-shadow:10px;
+     box-shadow: 0 2px 5px #404040;
+
+}
+.userArea
+{
+    width:92%;
+    height:80%;
+    background-color:white;
+      margin: 38px;
+    
+
+}
+.titleAdmin
+{
+    font-family:'Times New Roman';
+    font-size:larger;
+
+}
+.adminSidePanel
+{
+    width:25%;
+    height:55%; 
+    margin-top:0px;
+    background-color:white;
+    float:left;
+}
+.adminSidePanel1
+{
+    width:20%;
+    height:55%; 
+    margin-top:0px;
+    background-color:white;
+    float:left;
+}
+.adminSidePanelTab
+{
+    width:100%;
+    
+    height:50px;
+    border:0px solid;
+    margin-top:5px;
+}
+.adminWrap
+{
+    width: 70%;
+    margin-top: 0px;
+    background-color: white;
+    float: right;
+    border: 1px solid;
+}
+.adminWrap1
+{
+    width: 65%;
+    margin-top: 0px;
+    background-color: white;
+    float: right;
+    border: 1px solid;
+}
+.dashboardContentArea
+{
+    width:200px;
+    height:200px;
+    float:left;
+     box-shadow:10px;
+     box-shadow: 0 2px 5px #404040;
+      border-radius:7px; 
+}
+.adminWrapTopDashTitle
+{
+    width:100%;
+    height:20%;
+}
+.AdminTabDashImage
+{
+    width:11%;
+    background-image:url("../images/dash.png");    
+    height:31px;
+    float:left;
+    margin:10px;
+}
+.dashFont1
+{
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    color: #3a515e;
+    margin-left: 0px;
+    text-align: right;
+}
+.dashFont
+{
+font-family:'Times New Roman';
+font-size:20px;
+color:#3a515e;
+margin-left:120px;
+margin-top:5px;
+}
+.AdminTabMgmtImage
+{
+    width:11%;
+    background-image:url("../images/M.png");
+    height:31px;
+    float:left;
+    margin:10px;
+}
+.AdminTabBookingsImage
+{
+    width:11%;
+    background-image:url("../images/L.png");
+    height:31px;
+    float:left;
+    margin:10px;
+}
+.AdminTabLogOutImage
+{
+    width: 11%;
+    background-image: url('../images/exit.png');
+    height: 31px;
+    float: left;
+    margin: 10px;
+}
+.AdminTabButton
+{
+    width:80%;
+    height:33px;
+    float:left;
+    margin:10px;
+}
+.AdminTabButtons
+{
+    width:100%;
+    height:33px;
+   
+      cursor:pointer;   
+}
+.AdminTabButtons:hover
+{
+    box-shadow:0px 0px 6px BLUE;
+}
+.empAvailWrap
+{
+    border-style: solid;
+    border-color: inherit;
+    border-width: 0px;
+    width:99%;
+    height:32%;
+    background-color:white;
+    margin:auto;
+
+    }
+.box1
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 1px;
+width: 30%;
+    height: 90%;
+    margin: 1%;
+    float: left;
+    top: 80px;
+}
+.box1TitleR
+{
+    padding :12px;
+    font-size:x-large;
+    color:red;
+    width:94%;
+    height:32%;
+    text-align:center;
+}
+.box1TitleG
+{
+    padding :12px;
+    font-size:x-large;
+    color:green;
+    width:94%;
+    height:32%;
+    text-align:center;
+}
+.box1TitleB
+{
+    padding :12px;
+    font-size:x-large;
+    color:blue;
+    width:94%;
+    height:32%;
+    text-align:center;
+}
+.buttontimeSlot
+{
+    border-style: outset;
+    background-color: white;
+    box-shadow: 10px;
+    box-shadow: 0px 0px 6px #000000;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.buttontimeSlot:hover
+{
+  box-shadow: 0 2px 2px #3a515e;
+}
+
+.box11
+{
+    border-style: solid;
+    border-color: inherit;
+    border-width: 0px;
+    width:100%;
+    height:17%;  
+    margin:auto;
+    margin-top:20px;
+    margin:auto;
+}
+.box12
+{
+    border-style: solid;
+    border-color: inherit;
+    border-width: 0px;
+    width: 90%;
+    height: 67%;
+    background-color: white;
+    
+}
+.box13
+{
+    border-style: solid;
+    border-color: inherit;
+    border-width: 0px;
+    width:99%;
+    height:5%;
+    background-color:white;    
+    margin:auto;
+    margin-top:20px;
+    margin:auto;
+
+}
+.TimeSlotBox
+{
+    width:45%;
+    height:10%;
+    background-color:white;  
+    margin:auto;
+    border:1px solid ;  
+    margin:auto;
+    padding:20px;
+    float:left;
+    background-color:#f9f9f9;
+
+}
+.timeSlotText
+{
+    font-size:larger;
+    color:black;
+    font-weight:500
+
+}
+.selectDateFormArea
+{
+    
+    width:90%;
+    height:60%;
+    margin:auto;
+    padding-top:10px;
+    margin-top :10px;
+ 
+}
+.welcmetext
+{
+    color :#3a515e;
+    font-family:Calibri ;
+    font-weight :400;
+}
+.selectDateCss
+{
+    color: #3a515e;
+    font-family: Calibri;
+    font-weight: 300;
+    font-size: large;
+}
+.signupWrap
+{
+    width:400px;
+    height:280px;
+    background-color:white;
+    margin:auto;
+    border-style: outset;
+    
+}
+.guestFormWrap
+{
+    width:400px;
+    height:350px;
+    background-color:white;
+    border-style: outset;
+    margin: auto;
+    
+}
+.chngwrap
+{
+    width:400px;
+    height:348px;
+    background-color:white;
+    margin:auto;
+    border-style: outset;
+    
+}
+.verifyWrap
+{
+    width:400px;
+    height:150px;
+    background-color:white;
+    margin:auto;
+    box-shadow:10px;
+    box-shadow: 0 2px 5px #404040;
+    border-top-left-radius :7px;
+    border-top-right-radius:7px;
+    font-size:larger;
+    
+}
+.strip
+{
+    width:100%;
+    height:50px;
+    font:400;
+    background-color:#3a515e;
+    font-family :'Times New Roman' ;
+    font-size:x-large;
+    font-weight :400;
+    color:white ;
+    border: medium 2px #3a515e;
+    border-top-left-radius :7px;
+    border-top-right-radius:7px;
+    border-bottom :2px solid;
+}
+.stripText
+{
+    padding :8px;
+}
+.logintextboxArea
+{
+    padding :25px 10px 10px 42px;
+    width:83%;
+    height :85px;
+    margin:auto;
+}
+.registertextboxArea
+{
+    padding :25px 10px 10px 42px;
+    width:100%;
+    height :200px;
+    margin:auto;
+}
+.verifiedArea
+{
+    padding :25px 10px 10px 42px;
+    width:83%;
+    height :200px;
+    margin:auto;
+}
+.textboxStyle
+{
+   width:300px;
+   height:30px;
+   margin-bottom:17px;  
+   
+}
+.textboxStyle:hover
+{
+    box-shadow: 0 2px 5px #3a515e;
+   
+}
+.button
+{
+    width :100px;
+    height :30px;
+    float :right;
+    border :1px solid ;
+    cursor :pointer ;
+   
+}
+.button:hover
+{
+    box-shadow: 0 2px 2px #3a515e;
+}
+.buttonSubmit
+{
+    width :100px;
+    height :30px;
+    float :left;
+    border :1px solid ;
+    cursor :pointer ;
+   
+}
+.buttonSubmit:hover
+{
+    box-shadow: 0 2px 2px #3a515e;
+}
+.buttonCancel
+{
+    width :100px;
+    height :30px;
+    margin-left:20px;
+    float :left;
+    border :1px solid ;
+    cursor :pointer ;
+   
+}
+.buttonCancel:hover
+{
+    box-shadow: 0 2px 2px #3a515e;
+}
+.button1
+{
+    width :100px;
+    height :30px;
+    float :right;
+    border :1px solid ;
+    cursor :pointer ;
+    margin-right:10px;
+   
+}
+.button1:hover
+{
+    box-shadow: 0 2px 2px #3a515e;
+}
+.Cbutton
+{
+   text-align :left;
+   font-family :Arial;
+    cursor :pointer ;
+   font-size:small;
+}
+.addButton
+{
+   cursor :pointer ;
+   background-color:#3a515e;
+   color:white ;
+   height :27px;
+   border :none ;
+   text-decoration :underline ;
+}
+.nextButton
+{
+   cursor :pointer ;
+   background-color:#3a515e;
+   color:white ;
+   height :27px;
+   border :none ;
+   text-decoration:none;
+   float :right;
+   width:100px;
+   font-weight:900;
+   margin-top:42px;
+   border:1px solid;
+   border-radius:3px;
+}
+.addButton1
+{
+   cursor :pointer ;
+   background-color:white;
+   color:blue ;
+   height :27px;
+   border :none ;
+   text-decoration :underline ;
+}
+
+.changButton
+{
+    width :150px;
+    height :30px;
+    float :right;
+    border :1px solid ;
+    cursor :pointer ;
+}
+.changButton:hover
+{
+    box-shadow: 0 2px 2px #3a515e;
+}
+.title
+{
+ width:100%;
+ height:90%;
+ background-color :#3a515e;
+  width:100%;
+}
+.titleMainText
+{
+    font-family: 'Arial';
+    color: white;
+    font-size: 25px;
+    padding: 10px 0px 10px 10px;
+    float: left;
+    height: 54px;
+    font-weight: bold;
+}
+.titleAddAccount
+{
+    font-family:'Times New Roman' ;
+    color :white ;
+    font-size :15px;
+    padding:13px 10px 10px 10px;
+    width:auto ;
+    float:right  ;
+
+}
+.linkbutton
+{
+    color:white ;
+}

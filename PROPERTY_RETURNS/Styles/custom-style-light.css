@@ -1,0 +1,105 @@
+body
+{
+    background-color:#FFFFFF !important;
+}
+.headerbar
+{
+    background-color: #428bca !important;
+    color: #ffffff;
+    height: 100px !important;
+    margin: 0 -15px !important;
+    padding: 5px 0 0 50px;
+    position: relative !important;
+}
+.content 
+{
+     padding-top:5px !important;
+}
+.contentnavbar .navbar.main .topnav > li > a {
+    background: none repeat scroll 0 0 #f2f2f2 !important;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 #a41b1b;
+    color: #fff;
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.contentnavbar .topnav,
+.contentnavbar .topnav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contentnavbar .topnav {
+  padding: 6px 5px 0 0;
+}
+.contentnavbar .topnav > li {
+  position: relative;
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  display: block;
+  padding: 0 3px;
+}
+.contentnavbar .topnav > li:last-child {
+  padding: 0 0 0 3px;
+}
+#contentnavbar
+{
+	background: url("../images/mosaic-pattern.png") repeat scroll 0 0 #f2f2f2 !important;
+    height: 50px !important;
+    margin: 5px 0 5px 0 !important;
+    border-radius: 4px;
+}
+
+.contentnavbar {
+  height: 46px;
+  background: #f2f2f2 url("../images/mosaic-pattern.png") repeat;
+  margin: 0;
+  position: relative;
+}
+#menu
+{
+	background: url("../images/pattern1.png") repeat scroll 0 0 #f2f2f2 !important;
+    color: #7c7c7c !important;
+    left: 0 !important;
+    top: 105px !important;
+    width: 204px !important;
+}
+
+#menu .slim-scroll > ul > li a, #menu > ul > li a {
+    color: #4e4e4e !important;
+}
+
+
+.btn-toggle-menu {
+    height: 25px;
+    line-height: 25px;
+    margin: 0;
+    padding: 1px 6px;
+    position: relative;
+    right: 5px;
+    text-align: center;
+    top: -5px;
+    width: 30px;
+}
+.btn-toggle-menu.ui-state-disabled {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.btn-toggle-menu .icon-bar
+{
+    background-color: #fff;
+    background-image: url("../images/glyphicons-halflings.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 2px;
+    line-height: 14px;
+    margin-top: 4px;
+    vertical-align: text-top;
+    width: 18px; 
+    border-radius: 1px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}

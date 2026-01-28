@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{54838CF4-CD3D-4462-841C-2D3068936C9E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PROPERTY_RETURNS</RootNamespace>
+    <AssemblyName>PROPERTY_RETURNS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clsIntranetApps, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\clsIntranetApps.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa, Version=5.5.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\Telerik\RadControls for ASP.NET AJAX Q1 2012 SP1\Bin40\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\Program Files (x86)\Telerik\RadControls for ASP.NET AJAX Q1 2012 SP1\Bin40\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\CaptchaImage.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\chkuid.aspx" />
+    <Content Include="Account\errorpage.aspx" />
+    <Content Include="Account\ForgotPassword.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Logout.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="dateSelection.aspx" />
+    <Content Include="DefaultErrorPage.html" />
+    <Content Include="DEPENDENTFORM1\DEPENDENTFORM1_ENTRY.aspx" />
+    <Content Include="FINAL_SUBMIT\ALL_TRN_SUBMIT.aspx" />
+    <Content Include="FORMS\DEPENDENT_FORM_1.aspx" />
+    <Content Include="FORMS\excep_dtl.aspx" />
+    <Content Include="FORMS\EXP_REPORT1.aspx" />
+    <Content Include="FORMS\GEN_REPORT1.aspx" />
+    <Content Include="FORMS\GEN_REPORT2.aspx" />
+    <Content Include="FORMS\GEN_REPORT3.aspx" />
+    <Content Include="FORMS\IMMOVABLE_FORM_3.aspx" />
+    <Content Include="FORMS\MAIN_REPORT_HOLDINGS.aspx" />
+    <Content Include="FORMS\MAIN_REPORT_REVIEW.aspx" />
+    <Content Include="FORMS\MAIN_REPORT_TRANSACTION.aspx" />
+    <Content Include="FORMS\MOVABLE_FORM2.aspx" />
+    <Content Include="FORMS\RP_SAVED_HOLDINGS.aspx" />
+    <Content Include="FORMS\RP_SAVED_TRANSACTION.aspx" />
+    <Content Include="FORMS\RP_SUBMITTED_HOLDING.aspx" />
+    <Content Include="FORMS\RP_SUBMITTED_TRANSACTION.aspx" />
+    <Content Include="FORMS\RP_SUBMITTED_TRNHOLD.aspx" />
+    <Content Include="FORMS\UserAuth.aspx" />
+    <Content Include="HOLDING\HLD_EXTRAINC.ascx" />
+    <Content Include="HOLDING\HLD_EXTRAINC1.ascx" />
+    <Content Include="HOLDING\HLD_FOREIGN.ascx" />
+    <Content Include="HOLDING\HLD_IMMOVABLE.ascx" />
+    <Content Include="HOLDING\HLD_LIABILITY.ascx" />
+    <Content Include="HOLDING\HLD_MOVABLE.ascx" />
+    <Content Include="HOLDING\HOLDING.aspx" />
+    <Content Include="HOME_PAGE.aspx" />
+    <Content Include="HOME_PAGE_NEW.aspx" />
+    <Content Include="Images\appdtl.png" />
+    <Content Include="Images\deselect.png" />
+    <Content Include="Images\edit_32 - Copy.png" />
+    <Content Include="Images\edit_32.png" />
+    <Content Include="Images\FilterCancel.gif" />
+    <Content Include="Images\headback.jpg" />
+    <Content Include="Images\headback1.jpg" />
+    <Content Include="Images\info.jpg" />
+    <Content Include="Images\ntpclogo2.jpg" />
+    <Content Include="Images\ntpc_1.jpg" />
+    <Content Include="Images\ntpc_logo.jpg" />
+    <Content Include="Images\view.jpg" />
+    <Content Include="Images\Viewicon.png" />
+    <Content Include="PostLoad.aspx" />
+    <Content Include="REPORTS\MYRETURNS.aspx" />
+    <Content Include="REPORTS\REPORT_SAVED_HOLDINGS.aspx" />
+    <Content Include="REPORTS\REPORT_SUBMITTED_HOLDINGS.aspx" />
+    <Content Include="REPORTS_ASPX\FORM1.aspx" />
+    <Content Include="REPORTS_ASPX\FORM2.ascx" />
+    <Content Include="REPORTS_ASPX\PRINTALL_HOLDINDS_TRNS_BOTH.aspx" />
+    <Content Include="REPORTS_ASPX\PRINTALL_SAVED_HOLDINGS.aspx" />
+    <Content Include="REPORTS_ASPX\PRINTALL_SAVED_TRNS.aspx" />
+    <Content Include="REPORTS_ASPX\PRINTALL_SUBMITTED_HOLDINGS.aspx" />
+    <Content Include="REPORTS_ASPX\PRINTALL_SUBMITTED_TRNS.aspx" />
+    <Content Include="REPORTS_ASPX\PRINTONLY_HOLDINGD_TRNS_BOTH.aspx" />
+    <Content Include="REPORTS_ASPX\PRINTONLY_SAVED_HOLDINGS.aspx" />
+    <Content Include="REPORTS_ASPX\PRINTONLY_SAVED_TRNS.aspx" />
+    <Content Include="REPORTS_ASPX\PRINTONLY_SUBMITTED_HOLDINGS - Copy.aspx" />
+    <Content Include="REPORTS_ASPX\PRINTONLY_SUBMITTED_HOLDINGS.aspx" />
+    <Content Include="REPORTS_ASPX\PRINTONLY_SUBMITTED_TRNS.aspx" />
+    <Content Include="REPORTS_ASPX\PRINT_SAVED_HOLDINGS.aspx" />
+    <Content Include="REPORTS_ASPX\R_FORM1.aspx" />
+    <Content Include="REPORTS_ASPX\SELECTED_DATE_EXTRA_INCOME.aspx" />
+    <Content Include="REPORTS_ASPX\SUBMIT_SAVED_HOLDINGS.aspx" />
+    <Content Include="Scripts\bootstrap-timepicker.min.js" />
+    <Content Include="Scripts\bootstrap-wizard.min.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\dhtmlxcombo.css" />
+    <Content Include="Scripts\dhtmlxcombo.js" />
+    <Content Include="Scripts\dhtmlxcommon.js" />
+    <Content Include="Scripts\holder.js" />
+    <Content Include="Scripts\jquery-3.6.4.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.js" />
+    <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\jquery.cookies.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.gritter.css" />
+    <Content Include="Scripts\jquery.gritter.min.js" />
+    <Content Include="Scripts\jquery.slimscroll.js" />
+    <Content Include="Scripts\jquery.table2excel.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr.js" />
+    <Content Include="Scripts\modernizr.min.js" />
+    <Content Include="Scripts\morris.min.js" />
+    <Content Include="Scripts\pace.min.js" />
+    <Content Include="Scripts\raphael-2.1.0.min.js" />
+    <Content Include="Scripts\retina.min.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="Scripts\StyleSheet.css" />
+    <Content Include="Scripts\table2excel.js" />
+    <Content Include="Styles\animate.delay.css" />
+    <Content Include="Styles\animate.min.css" />
+    <Content Include="Styles\bootstrap-override.css" />
+    <Content Include="Styles\bootstrap-timepicker.min.css" />
+    <Content Include="Styles\bootstrap.min.5.3.3.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\custom-style-light.css" />
+    <Content Include="Styles\CustomeSite.css" />
+    <Content Include="Styles\font-awesome.min.css" />
+    <Content Include="Styles\glyphicons.css" />
+    <Content Include="Styles\jquery-ui-1.10.3.css" />
+    <Content Include="Styles\jquery.dataTables.min.css" />
+    <Content Include="Styles\jquery.gritter.css" />
+    <Content Include="Styles\login.css" />
+    <Content Include="Styles\pace.css" />
+    <Content Include="Styles\responsive.css" />
+    <Content Include="Styles\select2.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Styles\style-light.css" />
+    <Content Include="Styles\style.default.css" />
+    <Content Include="Styles\toggles.css" />
+    <Content Include="Styles\weather-icons.min.css" />
+    <Content Include="TRANSACTION\TRANSACTION.aspx" />
+    <Content Include="TRANSACTION\TRN_FOREIGN.ascx" />
+    <Content Include="TRANSACTION\TRN_IMMOVABLE.ascx" />
+    <Content Include="TRANSACTION\TRN_LIABILITY.ascx" />
+    <Content Include="TRANSACTION\TRN_MOVABLE.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\CaptchaImage.aspx.cs">
+      <DependentUpon>CaptchaImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\CaptchaImage.aspx.designer.cs">
+      <DependentUpon>CaptchaImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\chkuid.aspx.cs">
+      <DependentUpon>chkuid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\chkuid.aspx.designer.cs">
+      <DependentUpon>chkuid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\errorpage.aspx.cs">
+      <DependentUpon>errorpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\errorpage.aspx.designer.cs">
+      <DependentUpon>errorpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="connect.cs" />
+    <Compile Include="dateSelection.aspx.cs">
+      <DependentUpon>dateSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dateSelection.aspx.designer.cs">
+      <DependentUpon>dateSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DEPENDENTFORM1\DEPENDENTFORM1_ENTRY.aspx.cs">
+      <DependentUpon>DEPENDENTFORM1_ENTRY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DEPENDENTFORM1\DEPENDENTFORM1_ENTRY.aspx.designer.cs">
+      <DependentUpon>DEPENDENTFORM1_ENTRY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FINAL_SUBMIT\ALL_TRN_SUBMIT.aspx.cs">
+      <DependentUpon>ALL_TRN_SUBMIT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FINAL_SUBMIT\ALL_TRN_SUBMIT.aspx.designer.cs">
+      <DependentUpon>ALL_TRN_SUBMIT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\DEPENDENT_FORM_1.aspx.cs">
+      <DependentUpon>DEPENDENT_FORM_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\DEPENDENT_FORM_1.aspx.designer.cs">
+      <DependentUpon>DEPENDENT_FORM_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\excep_dtl.aspx.cs">
+      <DependentUpon>excep_dtl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\excep_dtl.aspx.designer.cs">
+      <DependentUpon>excep_dtl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\EXP_REPORT1.aspx.cs">
+      <DependentUpon>EXP_REPORT1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\EXP_REPORT1.aspx.designer.cs">
+      <DependentUpon>EXP_REPORT1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\GEN_REPORT1.aspx.cs">
+      <DependentUpon>GEN_REPORT1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\GEN_REPORT1.aspx.designer.cs">
+      <DependentUpon>GEN_REPORT1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\GEN_REPORT2.aspx.cs">
+      <DependentUpon>GEN_REPORT2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\GEN_REPORT2.aspx.designer.cs">
+      <DependentUpon>GEN_REPORT2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\GEN_REPORT3.aspx.cs">
+      <DependentUpon>GEN_REPORT3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\GEN_REPORT3.aspx.designer.cs">
+      <DependentUpon>GEN_REPORT3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\IMMOVABLE_FORM_3.aspx.cs">
+      <DependentUpon>IMMOVABLE_FORM_3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\IMMOVABLE_FORM_3.aspx.designer.cs">
+      <DependentUpon>IMMOVABLE_FORM_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\MAIN_REPORT_HOLDINGS.aspx.cs">
+      <DependentUpon>MAIN_REPORT_HOLDINGS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\MAIN_REPORT_HOLDINGS.aspx.designer.cs">
+      <DependentUpon>MAIN_REPORT_HOLDINGS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\MAIN_REPORT_REVIEW.aspx.cs">
+      <DependentUpon>MAIN_REPORT_REVIEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\MAIN_REPORT_REVIEW.aspx.designer.cs">
+      <DependentUpon>MAIN_REPORT_REVIEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\MAIN_REPORT_TRANSACTION.aspx.cs">
+      <DependentUpon>MAIN_REPORT_TRANSACTION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\MAIN_REPORT_TRANSACTION.aspx.designer.cs">
+      <DependentUpon>MAIN_REPORT_TRANSACTION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\MOVABLE_FORM2.aspx.cs">
+      <DependentUpon>MOVABLE_FORM2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\MOVABLE_FORM2.aspx.designer.cs">
+      <DependentUpon>MOVABLE_FORM2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\RP_SAVED_HOLDINGS.aspx.cs">
+      <DependentUpon>RP_SAVED_HOLDINGS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\RP_SAVED_HOLDINGS.aspx.designer.cs">
+      <DependentUpon>RP_SAVED_HOLDINGS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\RP_SAVED_TRANSACTION.aspx.cs">
+      <DependentUpon>RP_SAVED_TRANSACTION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\RP_SAVED_TRANSACTION.aspx.designer.cs">
+      <DependentUpon>RP_SAVED_TRANSACTION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\RP_SUBMITTED_HOLDING.aspx.cs">
+      <DependentUpon>RP_SUBMITTED_HOLDING.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\RP_SUBMITTED_HOLDING.aspx.designer.cs">
+      <DependentUpon>RP_SUBMITTED_HOLDING.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\RP_SUBMITTED_TRANSACTION.aspx.cs">
+      <DependentUpon>RP_SUBMITTED_TRANSACTION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\RP_SUBMITTED_TRANSACTION.aspx.designer.cs">
+      <DependentUpon>RP_SUBMITTED_TRANSACTION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\RP_SUBMITTED_TRNHOLD.aspx.cs">
+      <DependentUpon>RP_SUBMITTED_TRNHOLD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\RP_SUBMITTED_TRNHOLD.aspx.designer.cs">
+      <DependentUpon>RP_SUBMITTED_TRNHOLD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\UserAuth.aspx.cs">
+      <DependentUpon>UserAuth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORMS\UserAuth.aspx.designer.cs">
+      <DependentUpon>UserAuth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GLB_FNS.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HOLDING\HLD_EXTRAINC.ascx.cs">
+      <DependentUpon>HLD_EXTRAINC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOLDING\HLD_EXTRAINC.ascx.designer.cs">
+      <DependentUpon>HLD_EXTRAINC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HOLDING\HLD_EXTRAINC1.ascx.cs">
+      <DependentUpon>HLD_EXTRAINC1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOLDING\HLD_EXTRAINC1.ascx.designer.cs">
+      <DependentUpon>HLD_EXTRAINC1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HOLDING\HLD_FOREIGN.ascx.cs">
+      <DependentUpon>HLD_FOREIGN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOLDING\HLD_FOREIGN.ascx.designer.cs">
+      <DependentUpon>HLD_FOREIGN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HOLDING\HLD_IMMOVABLE.ascx.cs">
+      <DependentUpon>HLD_IMMOVABLE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOLDING\HLD_IMMOVABLE.ascx.designer.cs">
+      <DependentUpon>HLD_IMMOVABLE.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HOLDING\HLD_LIABILITY.ascx.cs">
+      <DependentUpon>HLD_LIABILITY.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOLDING\HLD_LIABILITY.ascx.designer.cs">
+      <DependentUpon>HLD_LIABILITY.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HOLDING\HLD_MOVABLE.ascx.cs">
+      <DependentUpon>HLD_MOVABLE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOLDING\HLD_MOVABLE.ascx.designer.cs">
+      <DependentUpon>HLD_MOVABLE.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HOLDING\HOLDING.aspx.cs">
+      <DependentUpon>HOLDING.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOLDING\HOLDING.aspx.designer.cs">
+      <DependentUpon>HOLDING.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HOME_PAGE.aspx.cs">
+      <DependentUpon>HOME_PAGE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME_PAGE.aspx.designer.cs">
+      <DependentUpon>HOME_PAGE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HOME_PAGE_NEW.aspx.cs">
+      <DependentUpon>HOME_PAGE_NEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME_PAGE_NEW.aspx.designer.cs">
+      <DependentUpon>HOME_PAGE_NEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostLoad.aspx.cs">
+      <DependentUpon>PostLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostLoad.aspx.designer.cs">
+      <DependentUpon>PostLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPORTS\MYRETURNS.aspx.cs">
+      <DependentUpon>MYRETURNS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS\MYRETURNS.aspx.designer.cs">
+      <DependentUpon>MYRETURNS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\REPORT_SAVED_HOLDINGS.aspx.cs">
+      <DependentUpon>REPORT_SAVED_HOLDINGS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS\REPORT_SAVED_HOLDINGS.aspx.designer.cs">
+      <DependentUpon>REPORT_SAVED_HOLDINGS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS\REPORT_SUBMITTED_HOLDINGS.aspx.cs">
+      <DependentUpon>REPORT_SUBMITTED_HOLDINGS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS\REPORT_SUBMITTED_HOLDINGS.aspx.designer.cs">
+      <DependentUpon>REPORT_SUBMITTED_HOLDINGS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\FORM1.aspx.cs">
+      <DependentUpon>FORM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\FORM1.aspx.designer.cs">
+      <DependentUpon>FORM1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\FORM2.ascx.cs">
+      <DependentUpon>FORM2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\FORM2.ascx.designer.cs">
+      <DependentUpon>FORM2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTALL_HOLDINDS_TRNS_BOTH.aspx.cs">
+      <DependentUpon>PRINTALL_HOLDINDS_TRNS_BOTH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTALL_HOLDINDS_TRNS_BOTH.aspx.designer.cs">
+      <DependentUpon>PRINTALL_HOLDINDS_TRNS_BOTH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTALL_SAVED_HOLDINGS.aspx.cs">
+      <DependentUpon>PRINTALL_SAVED_HOLDINGS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTALL_SAVED_HOLDINGS.aspx.designer.cs">
+      <DependentUpon>PRINTALL_SAVED_HOLDINGS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTALL_SAVED_TRNS.aspx.cs">
+      <DependentUpon>PRINTALL_SAVED_TRNS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTALL_SAVED_TRNS.aspx.designer.cs">
+      <DependentUpon>PRINTALL_SAVED_TRNS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTALL_SUBMITTED_HOLDINGS.aspx.cs">
+      <DependentUpon>PRINTALL_SUBMITTED_HOLDINGS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTALL_SUBMITTED_HOLDINGS.aspx.designer.cs">
+      <DependentUpon>PRINTALL_SUBMITTED_HOLDINGS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTALL_SUBMITTED_TRNS.aspx.cs">
+      <DependentUpon>PRINTALL_SUBMITTED_TRNS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTALL_SUBMITTED_TRNS.aspx.designer.cs">
+      <DependentUpon>PRINTALL_SUBMITTED_TRNS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTONLY_HOLDINGD_TRNS_BOTH.aspx.cs">
+      <DependentUpon>PRINTONLY_HOLDINGD_TRNS_BOTH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTONLY_HOLDINGD_TRNS_BOTH.aspx.designer.cs">
+      <DependentUpon>PRINTONLY_HOLDINGD_TRNS_BOTH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTONLY_SAVED_HOLDINGS.aspx.cs">
+      <DependentUpon>PRINTONLY_SAVED_HOLDINGS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTONLY_SAVED_HOLDINGS.aspx.designer.cs">
+      <DependentUpon>PRINTONLY_SAVED_HOLDINGS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTONLY_SAVED_TRNS.aspx.cs">
+      <DependentUpon>PRINTONLY_SAVED_TRNS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTONLY_SAVED_TRNS.aspx.designer.cs">
+      <DependentUpon>PRINTONLY_SAVED_TRNS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTONLY_SUBMITTED_HOLDINGS.aspx.cs">
+      <DependentUpon>PRINTONLY_SUBMITTED_HOLDINGS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTONLY_SUBMITTED_HOLDINGS.aspx.designer.cs">
+      <DependentUpon>PRINTONLY_SUBMITTED_HOLDINGS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTONLY_SUBMITTED_TRNS.aspx.cs">
+      <DependentUpon>PRINTONLY_SUBMITTED_TRNS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINTONLY_SUBMITTED_TRNS.aspx.designer.cs">
+      <DependentUpon>PRINTONLY_SUBMITTED_TRNS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINT_SAVED_HOLDINGS.aspx.cs">
+      <DependentUpon>PRINT_SAVED_HOLDINGS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\PRINT_SAVED_HOLDINGS.aspx.designer.cs">
+      <DependentUpon>PRINT_SAVED_HOLDINGS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\R_FORM1.aspx.cs">
+      <DependentUpon>R_FORM1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\R_FORM1.aspx.designer.cs">
+      <DependentUpon>R_FORM1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\SELECTED_DATE_EXTRA_INCOME.aspx.cs">
+      <DependentUpon>SELECTED_DATE_EXTRA_INCOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\SELECTED_DATE_EXTRA_INCOME.aspx.designer.cs">
+      <DependentUpon>SELECTED_DATE_EXTRA_INCOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\SUBMIT_SAVED_HOLDINGS.aspx.cs">
+      <DependentUpon>SUBMIT_SAVED_HOLDINGS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="REPORTS_ASPX\SUBMIT_SAVED_HOLDINGS.aspx.designer.cs">
+      <DependentUpon>SUBMIT_SAVED_HOLDINGS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\TRANSACTION.aspx.cs">
+      <DependentUpon>TRANSACTION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\TRANSACTION.aspx.designer.cs">
+      <DependentUpon>TRANSACTION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\TRN_FOREIGN.ascx.cs">
+      <DependentUpon>TRN_FOREIGN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\TRN_FOREIGN.ascx.designer.cs">
+      <DependentUpon>TRN_FOREIGN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\TRN_IMMOVABLE.ascx.cs">
+      <DependentUpon>TRN_IMMOVABLE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\TRN_IMMOVABLE.ascx.designer.cs">
+      <DependentUpon>TRN_IMMOVABLE.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\TRN_LIABILITY.ascx.cs">
+      <DependentUpon>TRN_LIABILITY.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\TRN_LIABILITY.ascx.designer.cs">
+      <DependentUpon>TRN_LIABILITY.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\TRN_MOVABLE.ascx.cs">
+      <DependentUpon>TRN_MOVABLE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\TRN_MOVABLE.ascx.designer.cs">
+      <DependentUpon>TRN_MOVABLE.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documents\2022_FAQ.pdf" />
+    <None Include="Documents\PROPERTY RETURNS DOCUMENT.pdf" />
+    <None Include="Properties\PublishProfiles\prop_returns.pubxml" />
+    <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54588</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58587/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
